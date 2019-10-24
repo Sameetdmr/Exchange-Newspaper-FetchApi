@@ -29,7 +29,7 @@ class App extends Component {
     this.componentDidMount = this.componentDidMount.bind(this)
 
   }
-
+  //Samet Demir
   //https://newsapi.org/v2/top-headlines?country=tr&apiKey=f951dd5671e341789141c38a9925a639
   componentDidMount() {
     fetch("https://newsapi.org/v2/top-headlines?country=tr&apiKey=f951dd5671e341789141c38a9925a639")
