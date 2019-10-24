@@ -10,6 +10,8 @@ import './App.css';
 
 
 class App extends Component {
+
+  //Çağırmak istediğimiz değişkenleri state içinde tutuyoruz.
   constructor(props) {
     super(props)
     this.state = {
@@ -21,7 +23,7 @@ class App extends Component {
       Norvec_kron: '',
       Avus_Dol: '',
 
-      items: [],
+      items: [], //Haber api den dönen değerleri dizide saklamak gerektiği için böyle tanımladım.
       error: null,
       isLoaded: false
     };
@@ -53,13 +55,14 @@ class App extends Component {
   }
 
 
-
+  //Money Api =>
 
   toggleButtonState() {
     fetch('http://data.fixer.io/api/latest?access_key=bf3c11e501e11c4eeebd3f283dbb2ac8')
       .then((response) => response.json())
       .then((resJson) =>
         this.setState({
+          //Çağırmak istediğiniz değişkenler farklılık gösterebilir.
           dolar: resJson.rates.USD,
           turk: resJson.rates.TRY,
           sterlin: resJson.rates.GBP,
@@ -80,11 +83,6 @@ class App extends Component {
           <Navbar expand="lg" variant="light" bg="dark">
             <Navbar.Brand href="#" style={{ color: "white" }}>Logo</Navbar.Brand>
           </Navbar>
-
-
-
-
-
           <Container>
             <Row style={{ paddingTop: "20px" }}>
               <Col sm={12}>
@@ -135,26 +133,14 @@ class App extends Component {
                   </tr>
                 </tbody>
               </Table>
-
-
-
             </Col>
-
           </Container>
-
-
-
-
           <Container>
             <Row style={{ paddingTop: "20px" }}>
 
               <Col sm={6}>
 
                 <b><h1 style={{ marginTop: 'revert', fontSize: 'x-large', color: 'crimson' }}>Son Dakika Haberleri</h1></b> <hr style={{ backgroundColor: 'black' }}></hr>
-
-
-
-
                 <div>
                   <ul>
                     {items.map(item => ( //Dönen tüm json verileri burada
@@ -173,24 +159,10 @@ class App extends Component {
                   </ul>
 
                 </div>
-
-
-
-
-
               </Col>
-
-
-
             </Row>
-
           </Container>
-
-
-
-
         </div>
-
       </div>
     );
   }
