@@ -1,10 +1,10 @@
 # Fetch Api use React
- 
-### Projemde api kullanılarak çekilen değerleri ekranda yazdırmayı çalıştırdım.
+ 
+### In my project, I tried to print the values taken using api on the screen.
 
-### Proje içerisinde bazı eklentiler kullanılmıştır ve günlük döviz, son dakika haber kullanılarak ekranda gösterilmiştir.
+### Some add-ons were used in the project and the daily currency was shown on the screen using breaking news.
 
-<p>Aşagıdaki Adımları izlemeniz yeterlidir</p> </br>
+<p> Just follow the steps in here</p></br>
 
 - git clone 'repo link'
 - cd Exchange-Newspaper-FetchApi 
